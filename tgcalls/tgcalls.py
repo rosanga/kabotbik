@@ -11,13 +11,14 @@ except:
     os.system("pip install nodejs")
     os.system("npm i -g npm")
     os.system("git clone https://github.com/InukaAsith/pytgcalls")
-    os.system(
-        "cd pytgcalls/ && \
-npm install && \
-npm run prepare && \
-cd pytgcalls/js && \
-npm install && \
-cd ../../"
+    os.system("git clone https://github.com/pytgcalls/pytgcalls && \
+    cd pytgcalls/ && \
+    rm -r .git && \
+    npm install && \
+    npm run prepare && \
+    cd pytgcalls/js && \
+    npm install && \
+    cd ../../"
     )
     # os.system("pip3 install -r requirements.txt")
     os.system("cd ../")
