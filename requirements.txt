@@ -73,6 +73,5 @@ search_engine_parser
 asyncio
 ffmpeg-python>=0.2.0
 Naked 
-socketio
-youtube_search_python
+python-socketio
 python-dotenv
