@@ -1,4 +1,4 @@
-FROM heroku/heroku:20-build
+FROM heroku/heroku:20
 FROM debian:latest
 
 RUN apt update && apt upgrade -y
