@@ -1,7 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-import *
+import tgcalls
+import sira
 from DaisyX import DURATION_LIMIT
 from DaisyX import pbot as Client
 from DaisyX.Addons.converter import convert
