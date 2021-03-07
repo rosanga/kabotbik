@@ -66,4 +66,6 @@ async def play(client: Client, message_: Message):
         await res.edit_text(f"#️⃣ Queued at position {position}.")
     else:
         await res.edit_text("▶️ Playing...")
-        DaisyX.Addons.tgcalls.pytgcalls.join_group_call(message_.chat.id, file_path, 48000)
+        DaisyX.Addons.tgcalls.pytgcalls.join_group_call(
+            message_.chat.id, file_path, 48000
+        )
