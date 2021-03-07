@@ -53,7 +53,7 @@ from DaisyX import (
     telethn,
     updater,
 )
-from DaisyX.Addons.tgcalls import run
+from tgcalls import run
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!

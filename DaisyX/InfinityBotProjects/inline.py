@@ -9,7 +9,7 @@ from pyrogram.types import (
 )
 from youtubesearchpython import VideosSearch
 
-from DaisyX import Client
+from DaisyX import pbot as Client
 
 
 @Client.on_inline_query()
