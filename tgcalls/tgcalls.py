@@ -10,7 +10,6 @@ except:
     os.system("curl -sL https://deb.nodesource.com/setup_15.x | bash -")
     os.system("pip install nodejs")
     os.system("npm i -g npm")
-    os.system("git clone https://github.com/InukaAsith/pytgcalls")
     os.system(
         "git clone https://github.com/pytgcalls/pytgcalls && \
     cd pytgcalls/ && \
