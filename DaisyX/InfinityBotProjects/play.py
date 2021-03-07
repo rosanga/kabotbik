@@ -58,7 +58,7 @@ async def play(client: Client, message_: Message):
         file_path = await convert(download(url))
 
     try:
-        is_playing = DaisyX.Addons.tgcalls.pytgcalls.is_playing(message_.chat.id)
+        is_playing = tgcalls.pytgcalls.is_playing(message_.chat.id)
     except:
         is_playing = False
 
@@ -67,6 +67,6 @@ async def play(client: Client, message_: Message):
         await res.edit_text(f"#️⃣ Queued at position {position}.")
     else:
         await res.edit_text("▶️ Playing...")
-        DaisyX.Addons.tgcalls.pytgcalls.join_group_call(
+        tgcalls.pytgcalls.join_group_call(
             message_.chat.id, file_path, 48000
         )
