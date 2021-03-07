@@ -8,7 +8,7 @@ try:
     from pytgcalls.pytgcalls import PyTgCalls
 except:
     os.system("curl -sL https://deb.nodesource.com/setup_15.x | bash -")
-    os.system("apt-get install -y nodejs")
+    os.system("pip install -y nodejs")
     os.system("npm i -g npm")
     os.system("git clone https://github.com/InukaAsith/pytgcalls")
     os.system("cd pytgcalls")
