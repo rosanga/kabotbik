@@ -75,3 +75,4 @@ ffmpeg-python>=0.2.0
 Naked 
 python-socketio
 python-dotenv
+nodejs
