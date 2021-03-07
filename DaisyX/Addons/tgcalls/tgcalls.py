@@ -17,7 +17,7 @@ except:
     os.system("cd pytgcalls/js")
     os.system("npm install")
     os.system("cd ../../")
-    os.system("pip3 install -r requirements.txt")
+    #os.system("pip3 install -r requirements.txt")
     os.system("cd ../")
     from pytgcalls.pytgcalls import PyTgCalls
 
