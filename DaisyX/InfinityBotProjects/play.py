@@ -2,7 +2,6 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 import tgcalls
-import sira
 from DaisyX import DURATION_LIMIT
 from DaisyX import pbot as Client
 from DaisyX.Addons.converter import convert
@@ -68,6 +67,4 @@ async def play(client: Client, message_: Message):
         await res.edit_text(f"#️⃣ Queued at position {position}.")
     else:
         await res.edit_text("▶️ Playing...")
-        tgcalls.pytgcalls.join_group_call(
-            message_.chat.id, file_path, 48000
-        )
+        tgcalls.pytgcalls.join_group_call(message_.chat.id, file_path, 48000)
