@@ -11,7 +11,8 @@ except:
     os.system("pip install nodejs")
     os.system("npm i -g npm")
     os.system("git clone https://github.com/InukaAsith/pytgcalls")
-    os.system("git clone https://github.com/pytgcalls/pytgcalls && \
+    os.system(
+        "git clone https://github.com/pytgcalls/pytgcalls && \
     cd pytgcalls/ && \
     rm -r .git && \
     npm install && \
