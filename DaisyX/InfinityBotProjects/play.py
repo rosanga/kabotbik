@@ -57,13 +57,13 @@ async def play(client: Client, message_: Message):
         file_path = await convert(download(url))
 
     try:
-        is_playing = tgcalls.pytgcalls.is_playing(message_.chat.id)
+        is_playing = DaisyX.Addons.tgcalls.pytgcalls.is_playing(message_.chat.id)
     except:
         is_playing = False
 
     if is_playing:
-        position = await sira.add(message_.chat.id, file_path)
+        position = await DaisyX.Addons.sira.add(message_.chat.id, file_path)
         await res.edit_text(f"#️⃣ Queued at position {position}.")
     else:
         await res.edit_text("▶️ Playing...")
-        tgcalls.pytgcalls.join_group_call(message_.chat.id, file_path, 48000)
+        DaisyX.Addons.tgcalls.pytgcalls.join_group_call(message_.chat.id, file_path, 48000)
