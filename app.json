@@ -20,12 +20,8 @@
    "buildpacks": [
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "heroku/python"
-    }     
-  ], 
-   "stack": "container",     
+    }  
+  ],
    "env": {
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
@@ -188,14 +184,4 @@
          "required": false,
          "value": ""
       }
-   },
-   "keywords": [
-      "telegram",
-      "anime",
-      "group",
-      "manager",
-      "daisy"
-   ],
-   "name": "Liza Snowgirl",
-   "repository": "https://github.com/Infinity-bots/lizasnowgirl"
-}
+   }
