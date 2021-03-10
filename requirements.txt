@@ -77,4 +77,4 @@ Naked
 python-socketio
 python-dotenv
 nodejs
-telegram
+
