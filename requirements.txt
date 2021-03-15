@@ -64,4 +64,22 @@ fontTools
 nltk
 emoji
 
-uniborg
+#Inline
+telegraph
+dateparser==1.0.0
+better_profanity
+nudepy
+textblob 
+nekos.py
+opencv-python-headless==4.4.0.44
+imutils==0.5.3
+scikit-image==0.17.2
+pornhub_api
+youtube_search
+search_engine_parser
+wget
+fake_useragent
+selenium
+pymediainfo
+hachoir
+pybase64
