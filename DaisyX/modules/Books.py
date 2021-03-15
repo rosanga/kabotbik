@@ -51,4 +51,4 @@ async def _(event):
 __mod_name__ = "Books"
 __help__ = """booksdl: Books Scrapper
 Syntax : /book <book name>
-Usage :Gets Instant Download Link Of Given Book.""
+Usage :Gets Instant Download Link Of Given Book."""
