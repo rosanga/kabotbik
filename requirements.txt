@@ -76,10 +76,10 @@ imutils==0.5.3
 scikit-image==0.17.2
 #pornhub_api
 youtube_search
-#search_engine_parser
+search_engine_parser
 wget
 fake_useragent
 selenium
-pymediainfo
+#pymediainfo
 hachoir
 pybase64
