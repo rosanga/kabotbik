@@ -2,10 +2,10 @@ import argparse
 import asyncio
 import os
 import random
-import shutil
+#import shutil
 import string
 import time
-from pathlib import Path
+#from pathlib import Path
 
 import hachoir
 import requests
