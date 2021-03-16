@@ -81,5 +81,5 @@ wget
 fake_useragent
 selenium
 #pymediainfo
-hachoir
-pybase64
+#hachoir
+#pybase64
