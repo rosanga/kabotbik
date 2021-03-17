@@ -14,10 +14,10 @@ from logging.handlers import RotatingFileHandler
 
 from DaisyX.config import get_str_key, get_int_key
 from DaisyX.services.pyrogram import pbot
-#TG_BOT_TOKEN = get_str_key("TOKEN", required=True)
+TG_BOT_TOKEN = get_str_key("TOKEN", required=True)
 APP_ID = get_int_key("AUTOFILTER_APP_ID", required=True)
 API_HASH = get_str_key("AUTOFILTER_APP_HASH", required=True)
-TG_BOT_SESSION = get_str_key("AUTOFILTER_SESSION", required=True)
+TG_USER_SESSION = get_str_key("AUTOFILTER_SESSION", required=True)
 TG_BOT_WORKERS = 4
 LOG_FILE_NAME = "filterbot.txt"
 #from user import User
@@ -60,16 +60,21 @@ class User(Client):
         await super().stop()
         self.LOGGER(__name__).info("Bot stopped. Bye.")
  
-class Bot(pbot):
+class Bot(Client):
     USER: User = None
     USER_ID: int = None
-    """
+
     def __init__(self):
         super().__init__(
+            "bot",
+            api_hash=API_HASH,
+            api_id=APP_ID,
+            workers=TG_BOT_WORKERS,
+            bot_token=TG_BOT_TOKEN
+        )
         self.LOGGER = LOGGER
-    """
+
     async def start(self):
-        """
         await super().start()
         usr_bot_me = await self.get_me()
         self.set_parse_mode("html")
@@ -78,11 +83,9 @@ class Bot(pbot):
             f"Add @{usr_bot_me.username} as admin with all rights in your required channels\n\n"
         )
         #AUTH_USERS.add(680815375)
-        """
         self.USER, self.USER_ID = await User().start()
-    """
+
     async def stop(self, *args):
         await super().stop()
         self.LOGGER(__name__).info("Bot stopped. Bye.")
-    """    
 Bot().run()        
