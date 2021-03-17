@@ -17,8 +17,8 @@ MONGO_DB': 'DaisyX'
 
 
 # For auto filters
-MONGO_URI2: "mongodb+srv://daisy:daisy@cluster0.ffb4i.mongodb.net/DaisyX?retryWrites=true&w=majority" 
-MONGO_URI2_NAME: 'DaisyX'
+MONGO_URI2: "mongodb+srv://DaisyX:DaisyX@cluster0.qrtrd.mongodb.net/autofilter?retryWrites=true&w=majority" 
+MONGO_URI2_NAME: 'autofilter'
 # I think by using 2 db's we can save the money.. If you don't like this fill above two vars with first MONGO_URI and MONGO_DB
 
 API_PORT': 8080
