@@ -4,7 +4,8 @@
 
 
 from pyrogram import (
-    __version__
+    __version__,
+    Client
 )
 import os
 import logging
@@ -12,7 +13,7 @@ from logging.handlers import RotatingFileHandler
 
 
 from DaisyX.config import get_str_key, get_int_key
-from DaisyX.services.pyrogram import pbot as Client
+#from DaisyX.services.pyrogram import pbot as Client
 TG_BOT_TOKEN = get_str_key("TOKEN", required=True)
 APP_ID = get_int_key("AUTOFILTER_APP_ID", required=True)
 API_HASH = get_str_key("AUTOFILTER_APP_HASH", required=True)
