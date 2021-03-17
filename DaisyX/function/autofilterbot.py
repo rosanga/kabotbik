@@ -62,8 +62,14 @@ class User(Client):
  
 class Bot(pbot):
     USER: User = None
-    USER_ID: int = None      
+    USER_ID: int = None
+    """
+    def __init__(self):
+        super().__init__(
+        self.LOGGER = LOGGER
+    """
     async def start(self):
+        """
         await super().start()
         usr_bot_me = await self.get_me()
         self.set_parse_mode("html")
@@ -72,10 +78,11 @@ class Bot(pbot):
             f"Add @{usr_bot_me.username} as admin with all rights in your required channels\n\n"
         )
         #AUTH_USERS.add(680815375)
+        """
         self.USER, self.USER_ID = await User().start()
-
+    """
     async def stop(self, *args):
         await super().stop()
         self.LOGGER(__name__).info("Bot stopped. Bye.")
-        
+    """    
 Bot().run()        
