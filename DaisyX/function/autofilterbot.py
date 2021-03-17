@@ -60,7 +60,7 @@ class User(Client):
         await super().stop()
         self.LOGGER(__name__).info("Bot stopped. Bye.")
  
-class Bot(Client):
+class Bot(pbot):
     USER: User = None
     USER_ID: int = None
 
