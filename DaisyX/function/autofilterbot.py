@@ -65,9 +65,8 @@ class Bot(Client):
     USER_ID: int = None
 
     def __init__(self):
-        super().pbot()
-        self.LOGGER = LOGGER
-
+        pbot()
+        
     async def start(self):
         await super().start()
         usr_bot_me = await self.get_me()
