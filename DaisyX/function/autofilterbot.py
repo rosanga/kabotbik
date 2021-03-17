@@ -62,11 +62,7 @@ class User(Client):
  
 class Bot(pbot):
     USER: User = None
-    USER_ID: int = None
-"""
-    def __init__(self):
-        pbot()"""
-        
+    USER_ID: int = None      
     async def start(self):
         await super().start()
         usr_bot_me = await self.get_me()
