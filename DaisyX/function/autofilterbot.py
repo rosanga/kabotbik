@@ -64,16 +64,6 @@ class Bot(Client):
     USER: User = None
     USER_ID: int = None
     async def start(self):
-        await super().start()
-        usr_bot_me = await self.get_me()
-        self.set_parse_mode("html")
-        self.LOGGER(__name__).info(
-            f"@{usr_bot_me.username}  started!\n\n"
-            f"Add @{usr_bot_me.username} as admin with all rights in your required channels\n\n"
-        )
         #AUTH_USERS.add(680815375)
         self.USER, self.USER_ID = await User().start()
-
-    async def stop(self, *args):
-        await super().stop()
-        self.LOGGER(__name__).info("Bot stopped. Bye.")
+Bot().run()
