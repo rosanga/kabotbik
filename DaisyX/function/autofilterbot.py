@@ -4,7 +4,6 @@
 
 
 from pyrogram import (
-    Client,
     __version__
 )
 import os
@@ -13,7 +12,7 @@ from logging.handlers import RotatingFileHandler
 
 
 from DaisyX.config import get_str_key, get_int_key
-from DaisyX.services.pyrogram import pbot
+from DaisyX.services.pyrogram import pbot as Client
 TG_BOT_TOKEN = get_str_key("TOKEN", required=True)
 APP_ID = get_int_key("AUTOFILTER_APP_ID", required=True)
 API_HASH = get_str_key("AUTOFILTER_APP_HASH", required=True)
@@ -63,17 +62,6 @@ class User(Client):
 class Bot(Client):
     USER: User = None
     USER_ID: int = None
-
-    def __init__(self):
-        super().__init__(
-            "bot",
-            api_hash=API_HASH,
-            api_id=APP_ID,
-            workers=TG_BOT_WORKERS,
-            bot_token=TG_BOT_TOKEN
-        )
-        self.LOGGER = LOGGER
-
     async def start(self):
         await super().start()
         usr_bot_me = await self.get_me()
