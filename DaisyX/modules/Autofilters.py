@@ -20,7 +20,6 @@ from DaisyX.services.pyrogramuserbot import pubot as Bot
 from DaisyX.db.autofilter_db import searchquery
 from DaisyX.modules.autofilters_channel import deleteallfilters
 #from config import AUTH_USERS
-from DaisyX.function.telethonbasics import get_all_admin_chats,is_admin
 from DaisyX.services.pyrogram import pbot as Client
 BUTTONS = {}
  
@@ -85,16 +84,8 @@ async def filter(client: Bot, message: Message):
 async def cb_handler(client: Bot, query: CallbackQuery):
     clicked = query.from_user.id
     typed = query.message.reply_to_message.from_user.id
-    if event.fwd_from:
-        return
-    if not event.is_group:       
-        return
-    #input_str = event.pattern_match.group(1)
-    if not await is_admin(event, BOT_ID): 
-        await event.reply("`I Should Be Admin To Do This!`")
-        return
-    if await is_admin(event, typed): 
-
+    if True == True:  #I'm Crazy :-)
+ 
         if query.data.startswith("next"):
             await query.answer()
             ident, index, keyword = query.data.split("_")
@@ -179,7 +170,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             await query.message.delete()
 
     else:
-        await query.answer("Thats not for you!!",show_alert=True)
+        await query.answer("Thats not for you!!",show_alert=True)  # :( wtf I.. know that you are laughing at me.. :)
 
 
 def split_list(l, n):
