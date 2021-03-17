@@ -10,7 +10,7 @@ from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 from DaisyX.services.pyrogram import pbot as Client
-from DaisyX.services.pyrogramuserbot import pubot as Bot
+from DaisyX.services.pyrogram import pbot as Bot
 from database.mdb import (
     savefiles,
     deletefiles,
