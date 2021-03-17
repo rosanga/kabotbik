@@ -18,7 +18,7 @@ from DaisyX.services.pyrogram import pbot
 APP_ID = get_int_key("AUTOFILTER_APP_ID", required=True)
 API_HASH = get_str_key("AUTOFILTER_APP_HASH", required=True)
 TG_BOT_SESSION = get_str_key("AUTOFILTER_SESSION", required=True)
-TG_BOT_WORKERS = "4"
+TG_BOT_WORKERS = 4
 LOG_FILE_NAME = "filterbot.txt"
 #from user import User
 
