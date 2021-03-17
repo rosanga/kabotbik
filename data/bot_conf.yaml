@@ -20,6 +20,10 @@ MONGO_DB': 'DaisyX'
 MONGO_URI2: "mongodb+srv://DaisyX:DaisyX@cluster0.qrtrd.mongodb.net/autofilter?retryWrites=true&w=majority" 
 MONGO_URI2_NAME: 'autofilter'
 # I think by using 2 db's we can save the money.. If you don't like this fill above two vars with first MONGO_URI and MONGO_DB
+AUTOFILTER_SESSION: "BQCQU61L-u1JOjolB2Wb7Ih1lFURwUcvMFZhFr4Be_gChAz4X-nNwe-g8PzUhLcL6XQv89ZfPOZ2f_GZ4E9-AkBt5v4vcKiOQ3t6bOA9FO8iCv7bk2tgiHlZGidaLsL7YX8wd3-4Y_CRIsxhomWzYfIvphVbVjH6TEDHxgQ5eHRiFOZwQ0nnza-TSj9uaZdkY3cNc-6KhAmZubOUpslUW1Cg_C3PP3i_uArWGJ65UCkvaZOZxXRHo31H3Lo8Yaa2Cisn495oRoPuLn4UOwNSgvxJxQBL_QYpDNXGivGQFrXind2KnO8VyVlbz_uMQbueLSwzPTRceztc6ua7mZ2-qZRLVYLzwQA"
+AUTOFILTER_APP_ID: 2250399
+AUTOFILTER_APP_HASH: "92f3051096a1da6bae0ebf2f06b011c8"
+
 
 API_PORT': 8080
 
