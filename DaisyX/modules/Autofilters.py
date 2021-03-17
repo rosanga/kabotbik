@@ -16,7 +16,7 @@ from pyrogram.types import (
     CallbackQuery
 )
 
-from DaisyX.services.pyrogramuserbot import pubot as Bot
+from DaisyX.services.pyrogram import pbot as Bot
 from DaisyX.db.autofilter_db import searchquery
 from DaisyX.modules.autofilters_channel import deleteallfilters
 #from config import AUTH_USERS
