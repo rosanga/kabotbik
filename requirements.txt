@@ -78,3 +78,17 @@ Markdown>=3.3.4
 better_profanity
 textblob 
 nudepy
+
+#TthonBasic
+cv2
+zipfile
+numpy
+pymediainfo
+fake-useragent
+
+#ImgTools
+pytz
+glitch_this
+pygifsicle
+shutil
+textwrap
