@@ -81,9 +81,7 @@ nudepy
 
 #TthonBasic
 opencv-python
-numpy
 pymediainfo
-fake-useragent
 
 #ImgTools
 pytz
