@@ -73,8 +73,6 @@ import shlex
 import subprocess
 import time
 from os.path import basename
-from typing import List, Optional, Tuple
-import webbrowser
 from bs4 import BeautifulSoup
 import requests
 from bs4 import BeautifulSoup as bs
@@ -84,9 +82,7 @@ import telethon
 from telethon import Button, custom, events, functions
 from pymediainfo import MediaInfo
 from telethon.tl.types import MessageMediaPhoto
-from typing import Union
 SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB"]
-BASE_URL = "https://isubtitles.org"
 import zipfile
 import aiohttp
 import numpy as np
