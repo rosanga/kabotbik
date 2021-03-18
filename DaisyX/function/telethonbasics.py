@@ -39,7 +39,6 @@ from hachoir.parser import createParser
 import hachoir
 import asyncio
 import os
-import lottie
 from selenium import webdriver
 import time
 import requests
@@ -47,26 +46,12 @@ import wget
 from DaisyX.services.telethon import tbot as borg
 from telethon.tl.types import DocumentAttributeAudio
 from PIL import Image
-#from youtube_dl import YoutubeDL
-#from youtube_dl.utils import (
-#    ContentTooShortError,
-#    DownloadError,
-#    ExtractorError,
-#    GeoRestrictedError,
-#    MaxDownloadsReached,
-#    PostProcessingError,
-#    UnavailableVideoError,
-#    XAttrMetadataError,
-#)
 import requests
 from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
-headers = {"UserAgent": UserAgent().random}
 import asyncio
 import json
 import math
 import re
-import shlex
 import subprocess
 import time
 from os.path import basename
@@ -80,25 +65,10 @@ from telethon import Button, custom, events, functions
 from pymediainfo import MediaInfo
 from telethon.tl.types import MessageMediaPhoto
 SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB"]
-import zipfile
 import aiohttp
 import numpy as np
 import cv2
 sedpath = "./"
-
-async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
-    """ run command in terminal """
-    args = shlex.split(cmd)
-    process = await asyncio.create_subprocess_exec(
-        *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
-    stdout, stderr = await process.communicate()
-    return (
-        stdout.decode("utf-8", "replace").strip(),
-        stderr.decode("utf-8", "replace").strip(),
-        process.returncode,
-        process.pid,
-    )
 
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):
@@ -244,51 +214,6 @@ async def convert_to_image(event, borg):
     return lmao_final
 
 
-# Thanks To Userge-X
-async def crop_vid(input_vid: str, final_path: str):
-    media_info = MediaInfo.parse(input_vid)
-    for track in media_info.tracks:
-        if track.track_type == "Video":
-            aspect_ratio = track.display_aspect_ratio
-            height = track.height
-            width = track.width
-    if aspect_ratio != 1:
-        crop_by = width if (height > width) else height
-        os.system(f'ffmpeg -i {input_vid} -vf "crop={crop_by}:{crop_by}" {final_path}')
-        os.remove(input_vid)
-    else:
-        os.rename(input_vid, final_path)
-
-   
-# By @Krishna_Singhal 
-def tgs_to_gif(sticker_path: str, quality: int = 256) -> str:                  
-    dest = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "animation.gif")
-    with open(dest, 'wb') as t_g:
-        lottie.exporters.gif.export_gif(lottie.parsers.tgs.parse_tgs(sticker_path), t_g, quality, 1)
-    os.remove(sticker_path)
-    return dest
-   
-# Ye Bhi Kang Karlega Kya? White eye madarchod   
-
-async def fetch_audio(event, ws):
-    if not event.reply_to_msg_id:
-        await event.edit("`Reply To A Video / Audio.`")
-        return
-    warner_stark = await event.get_reply_message()    
-    if warner_stark.audio is None  and warner_stark.video is None:
-        await event.edit("`Format Not Supported`")
-        return
-    if warner_stark.video:
-        await event.edit("`Video Detected, Converting To Audio !`")
-        warner_bros = await event.client.download_media(warner_stark.media)
-        stark_cmd = f"ffmpeg -i {warner_bros} -map 0:a friday.mp3"
-        await runcmd(stark_cmd)
-        final_warner = "friday.mp3"
-    elif warner_stark.audio:
-        await event.edit("`Download Started !`")
-        final_warner = await event.client.download_media(warner_stark.media)
-    await event.edit("`Almost Done!`")    
-    return final_warner
 
 async def is_nsfw(event):
     lmao = event
