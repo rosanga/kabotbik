@@ -32,7 +32,7 @@ async def download_coroutine(session, url, file_name, event, start, bot):
 
 **File Size:** {}
 
-**© @Infinity_BOTs**""".format(
+**©2021 @mizolibrary**""".format(
                 url,
                 os.path.basename(file_name).replace("%20", " "),
                 humanbytes(total_length),
@@ -92,6 +92,6 @@ ETA: {}""".format(
 __help__ = """
  • `/up`*:* reply to a direct download link to upload it to telegram as files
  
-© @ImJanindu 🇱🇰"""
+©2021 @mizolibrary"""
 
 __mod_name__ = "URL Upload 📤"
