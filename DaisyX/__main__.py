@@ -63,45 +63,43 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hello there, I'm [𝓓𝓪𝓲𝓼𝔂 𝓧](https://telegra.ph/file/473cc17913393959e0667.jpg)
+Hello,
 
-I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
+Kei hi Group manager Bot ka ni e
 
-✪ Make sure you read *INFO* Section Below ✪ 
+✪ Ka hnathawh theih i hriat duh chuan 👉 /help 👈 tih hi click rawh,chuan min hman dan tur leh update ka nih hun ah i hriat theih nan @rsrtginfo hi lo join ve bawk rawh ✪ 
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
+        InlineKeyboardButton(text="♚ Support Group", url="https://t.me/rsrtginfo"),
     ],
     [
-        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
+        InlineKeyboardButton(text="♚ Support Channel", callback_data="https://t.me/mizolibrary"),
     ],
     [
         InlineKeyboardButton(
-            text="💫 Add Daisy to your group 💫", url="t.me/daisyXBot?startgroup=true"
+            text="➕ Add me to your group ➕", url="t.me/kumtluangbot?startgroup=true"
         ),
     ],
 ]
 
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/473cc17913393959e0667.jpg)
-✪ /start: Starts me! You've probably already used this.
-✪ /help: Click this, I'll let you know about myself!
-✪ /donate: You can support my creater using this command.
+*Main Commands :* [🤖]
+✪ /start: Min tihnun na.
+✪ /help: Ka hnathawh theih hriat theihna.
+✪ /donate: Donation chungchang hriatna
 ✪ /settings: 
-   ◔ in PM: will send you your settings for all supported modules.
-   ◔ in a Group: will redirect you to pm, with all that chat's settings.
+   ◔ Private ah: Module support zawng zawng siamna pek ini ang.
+   ◔ Group ah: Private atanga chat setting khawihna pek ini ang.
 """.format(
     dispatcher.bot.first_name,
-    "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
+    "" if not ALLOW_EXCL else "\nCommand zawng zawng hi / emaw ! a bultan tur ani.\n",
 )
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer's of the Base code,
-Support them  [Inuka](t.me/InukaASiTH),[Jason](t.me/imjanindu),"""
+DONATE_STRING = """Ka nun zel theih nan min siamtu hnen ah hian i donate ve thei ang🤗[RSR](t.me/rsrmusic)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -360,26 +358,26 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by Infinity_Bots.* "
-            f"\n\n 🔥 Join [Infinity_Bots](https://t.me/Infinity_Bots) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
-            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/473cc17913393959e0667.jpg)"
-            f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
+            text=f"*Chibai!\n\nkei hi zangkhai taka group i enkawl theuh nan a pui thei tur che ka ni e* "
+            f"\n\n Update ka nih hun a i hriat theih nan [RSR TG info★](https://t.me/rsrtginfo) hi lo join ve rawh"
+            f"\n\n Min siamtu hi @rsrmusic ani e🙃"
+            f"\n\nKa feature neih te nen hian theih tawp chhuah a puih che ka tum ang"
+            f"\n\n👇 A hnuai a button ho khu click la lo join ve rawh 👇",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="How To Use Me", callback_data="aboutmanu_howto"
+                            text="TG Group", url="https://t.me/rsrtginfo"
                         ),
                         InlineKeyboardButton(
-                            text="T & C", callback_data="aboutmanu_tac"
+                            text="TG Channel", url="https://t.me/mizolibrary"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="❔Help & Commands", callback_data="help_back"
+                            text="YouTube Channel", url="https://youtube.com/channel/UCQaqJswnYN2OXMATHvwil8w"
                         )
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
@@ -398,7 +396,7 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [InfinityJE](https://t.me/infinityje).\n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [RSR TG info★](https://t.me/rsrtginfo).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
