@@ -32,22 +32,19 @@ async def is_admin(event, user):
 
 import random
 import requests
-import string
+
 from bs4 import BeautifulSoup
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 import hachoir
 import asyncio
 import os
-from pathlib import Path
+import lottie
 from selenium import webdriver
 import time
 import requests
-import shutil
-import argparse
 import wget
 from DaisyX.services.telethon import tbot as borg
-import lottie
 from telethon.tl.types import DocumentAttributeAudio
 from PIL import Image
 #from youtube_dl import YoutubeDL
