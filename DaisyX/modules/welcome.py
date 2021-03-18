@@ -186,7 +186,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Oh my! Hey Owner, let's get this moving (｡•̀ᴗ-)✧.",
+                    "Welcome Master @rsrmusic 🥰.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -513,7 +513,7 @@ def left_member(update: Update, context: CallbackContext):
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Oi! Chrome! He left..ʕ´• ᴥ•̥`ʔ", reply_to_message_id=reply
+                    "Goodbye Master @rsrmusic😭", reply_to_message_id=reply
                 )
                 return
 
