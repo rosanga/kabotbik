@@ -90,4 +90,3 @@ pytz
 glitch_this
 pygifsicle
 pytest-shutil
-textwrap
