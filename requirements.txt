@@ -89,5 +89,5 @@ fake-useragent
 pytz
 glitch_this
 pygifsicle
-shutil
+pytest-shutil
 textwrap
