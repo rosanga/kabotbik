@@ -265,8 +265,8 @@ async def iamthug(event):
         return
     if await is_admin(event, event.message.sender_id):       
         if not event.reply_to_msg_id:
-        await event.reply("Reply to any Image.")
-        return  
+            await event.reply("Reply to any Image.")
+            return  
         hmm = await event.reply("`Converting To thug Image..`")
         await event.get_reply_message()
         img = await convert_to_image(event, borg)
@@ -675,9 +675,11 @@ async def img(event):
             if files and os.path.exists(files):
                 os.remove(files)
             event.delete()
-     else:      
-      await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
-      return       
+    else:
+        
+         
+        await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
+        return       
 # Credits To These :
 # https://github.com/midnightmadwalk [TG: @MidnightMadwalk]
 # https://github.com/code-rgb [TG: @DeletedUser420]
@@ -744,7 +746,7 @@ async def spinshit(message):
             await message.delete()
         os.remove(pic_loc)
         rmtree(path, ignore_errors=True)
-     else:      
+    else:      
       await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
       return       
 
@@ -786,7 +788,7 @@ async def hmm(event):
         for files in (ok, img):
             if files and os.path.exists(files):
                 os.remove(files)
-     else:      
+    else:      
       await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
       return
     
@@ -819,7 +821,7 @@ async def holastark2(event):
         await borg.send_file(event.chat_id, ok)
         if os.path.exists(ok):
             os.remove(ok)
-     else:      
+    else:      
       await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
       return        
 
@@ -852,7 +854,7 @@ async def slogo(event):
         await borg.send_file(event.chat_id, fname2, caption="Made By @DaisyXBot using the image_videtools plugin written by @FridayOT")
         if os.path.exists(fname2):
                 os.remove(fname2)
-     else:      
+    else:      
       await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
       return       
 
@@ -1012,16 +1014,16 @@ async def warnerstarkgang(event):
         await event.delete()
         await borg.send_file(event.chat_id, file=img, caption=so)
         os.remove(img)
-     else:      
+    else:      
       await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
       return
 
            
 @borg.on(events.NewMessage(pattern="/compressimage(?: |$)(.*)"))
 async def asscompress(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
-    if not await is_admin(event, BOT_ID):        
+    if not await is_admin(event, BOT_ID):
         await event.reply("`I Should Be Admin To Do This!`")
         return
     if await is_admin(event, event.message.sender_id):
@@ -1044,14 +1046,14 @@ async def asscompress(event):
         for files in (ok, image_path):
             if files and os.path.exists(files):
                 os.remove(files)
-     else:      
+    else:      
       await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
       return
     
     
 @borg.on(events.NewMessage(pattern="/cimage(?: |$)(.*)"))
 async def _(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
     if not await is_admin(event, BOT_ID):        
         await event.reply("`I Should Be Admin To Do This!`")
@@ -1079,14 +1081,14 @@ async def _(event):
         await ommhg.edit(endard)
         if os.path.exists(img):
             os.remove(img)
-     else:      
+    else:      
       await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
       return
 
     
 @borg.on(events.NewMessage(pattern="/speedup(?: |$)(.*)"))
 async def fasty(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
     if not await is_admin(event, BOT_ID):        
         await event.reply("`I Should Be Admin To Do This!`")
@@ -1126,13 +1128,13 @@ async def fasty(event):
         for files in (filem, hmm):
             if files and os.path.exists(files):
                 os.remove(files)
-     else:      
+    else:      
       await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
       return
     
 @borg.on(events.NewMessage(pattern="/slowdown$"))
 async def fasty(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
     if not await is_admin(event, BOT_ID):        
         await event.reply("`I Should Be Admin To Do This!`")
@@ -1178,7 +1180,7 @@ async def fasty(event):
     
 @borg.on(events.NewMessage(pattern="/flipvid$"))
 async def flip(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
     if not await is_admin(event, BOT_ID):        
         await event.reply("`I Should Be Admin To Do This!`")
@@ -1224,7 +1226,7 @@ async def flip(event):
     
 @borg.on(events.NewMessage(pattern="/extractaudio$"))
 async def audio_extract(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
     if not await is_admin(event, BOT_ID):        
         await event.reply("`I Should Be Admin To Do This!`")
@@ -1274,52 +1276,52 @@ async def audio_extract(event):
         await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
         return
                 
-@borg.on(events.NewMessage(pattern="/videonote$")))
+@borg.on(events.NewMessage(pattern="/videonote$"))
 async def convert_to_note(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
     if not await is_admin(event, BOT_ID):        
         await event.reply("`I Should Be Admin To Do This!`")
         return
     if await is_admin(event, event.message.sender_id):
-    if not event.reply_to_msg_id:
-        await event.reply("Reply To Any Video.")
-        return
-    await event.reply("Ah, Shit. Here it Starts.")
-    kk = await event.get_reply_message()
-    if not (kk.video or kk.video_note or kk.gif or kk.video_note):
-        await event.reply("`Oho, Reply To Video Only.`")
-        return
-    hmm = await event.client.download_media(kk.media)
-    try:
-        thumb = await event.client.download_media(kk.media, thumb=-1)
-    except:
-        thumb = "./resources/IMG_20200929_103719_628.jpg"
-    c_time = time.time()
-    filem = "ConvertedBy@DaisyXBOTwith@FridayOT.mp4"
-    await crop_vid(hmm, filem)
-    if not os.path.exists(filem):
-        await event.reply("**Process, Failed !**")
-        return
-    final_file = await uf(
-            file_name=filem,
-            client=bot,
-            file=open(filem, 'rb'),
-            progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(
-                    d, t, event, c_time, "Uploading Round / Video Note... Powered by @DaisySupport_Official", filem
-                )
-            ),
-        )
-    await event.delete()
-    await borg.send_file(
-        event.chat_id,
-        final_file,
-        thumb=thumb, 
-        video_note=True)
-    for files in (filem, hmm):
-        if files and os.path.exists(files):
-            os.remove(files)
+        if not event.reply_to_msg_id:
+            await event.reply("Reply To Any Video.")
+            return
+        await event.reply("Ah, Shit. Here it Starts.")
+        kk = await event.get_reply_message()
+        if not (kk.video or kk.video_note or kk.gif or kk.video_note):
+            await event.reply("`Oho, Reply To Video Only.`")
+            return
+        hmm = await event.client.download_media(kk.media)
+        try:
+            thumb = await event.client.download_media(kk.media, thumb=-1)
+        except:
+            thumb = "./resources/IMG_20200929_103719_628.jpg"
+        c_time = time.time()
+        filem = "ConvertedBy@DaisyXBOTwith@FridayOT.mp4"
+        await crop_vid(hmm, filem)
+        if not os.path.exists(filem):
+            await event.reply("**Process, Failed !**")
+            return
+        final_file = await uf(
+                file_name=filem,
+                client=bot,
+                file=open(filem, 'rb'),
+                progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
+                    progress(
+                        d, t, event, c_time, "Uploading Round / Video Note... Powered by @DaisySupport_Official", filem
+                    )
+                ),
+            )
+        await event.delete()
+        await borg.send_file(
+            event.chat_id,
+            final_file,
+            thumb=thumb, 
+            video_note=True)
+        for files in (filem, hmm):
+            if files and os.path.exists(files):
+                os.remove(files)
     else:      
         await event.reply("`You Should Be Admin to do this.. Always free in my inbox!`")
         return
@@ -1330,7 +1332,7 @@ def dodgeV2(image, mask):
 
 @borg.on(events.NewMessage(pattern="/memify (.*)"))
 async def starkmeme(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
     if not await is_admin(event, BOT_ID):        
         await event.reply("`I Should Be Admin To Do This!`")
@@ -1410,9 +1412,9 @@ def generate_meme(
     ok = sedpath + "/" + file_name
     im.save(ok, "WebP")
     
-@borg.on(events.NewMessage(pattern="/glitch$")))
+@borg.on(events.NewMessage(pattern="/glitch$"))
 async def glitch(event):
-     if event.fwd_from:
+    if event.fwd_from:
         return
     if not await is_admin(event, BOT_ID):        
         await event.reply("`I Should Be Admin To Do This!`")
