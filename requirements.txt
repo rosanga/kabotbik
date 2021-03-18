@@ -80,7 +80,7 @@ textblob
 nudepy
 
 #TthonBasic
-cv2
+opencv-python
 zipfile
 numpy
 pymediainfo
